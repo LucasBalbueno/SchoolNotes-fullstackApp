@@ -16,6 +16,7 @@ export function Alunos () {
                         <th>Disciplina 4</th>
                         <th>Disciplina 5</th>
                         <th>Frequência</th>
+                        <th>Média</th>
                         <th>Opções</th>
                     </tr>
                 </thead>
@@ -28,6 +29,7 @@ export function Alunos () {
                         <td>4.00</td>
                         <td>5.00</td>
                         <td>80%</td>
+                        <td>7.00</td>
                         <td>
                             <div>
                                 <TiDelete/>
@@ -42,6 +44,7 @@ export function Alunos () {
                         <td>4.00</td>
                         <td>5.00</td>
                         <td>80%</td>
+                        <td>7.00</td>
                         <td>
                             <div>
                                 <TiDelete/>
@@ -56,6 +59,7 @@ export function Alunos () {
                         <td>4.00</td>
                         <td>5.00</td>
                         <td>80%</td>
+                        <td>7.00</td>
                         <td>
                             <div>
                                 <TiDelete/>
@@ -70,6 +74,7 @@ export function Alunos () {
                         <td>4.00</td>
                         <td>5.00</td>
                         <td>80%</td>
+                        <td>7.00</td>
                         <td>
                             <div>
                                 <TiDelete/>

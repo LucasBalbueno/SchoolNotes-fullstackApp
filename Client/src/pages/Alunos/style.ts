@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const TableAlunos = styled.table`
     color: ${({ theme }) => theme.COLORS.CREAM};
-    font-size: 18px;
+    font-size: 16px;
     font-family: ${({ theme }) => theme.FONTS.PRIMARY};
     
     > thead {
