@@ -5,12 +5,12 @@ export default {
   
       CREAM: "#ECDFCC",
       GREEN: "#697565",
-      WHITE: "#F5F5F5",
+      // WHITE: "#F5F5F5",
   
       GRAY_100: "#666360",
       // GRAY_200: "#666360",
   
-      RED: "#FF002E"
+      // RED: "#FF002E"
     },
 
     FONTS: {
