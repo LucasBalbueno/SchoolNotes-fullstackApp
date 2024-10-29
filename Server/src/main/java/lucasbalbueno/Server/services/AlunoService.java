@@ -2,6 +2,7 @@ package lucasbalbueno.Server.services;
 
 import lucasbalbueno.Server.entities.Aluno;
 import lucasbalbueno.Server.repository.AlunoRepository;
+import lucasbalbueno.Server.services.exception.EntityNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,11 @@ public class AlunoService {
 
     public Aluno getById(int id) {
         Optional<Aluno> obj = repository.findById(id);
+
+        if(obj.isEmpty()){
+            throw new EntityNotFound("Not found Aluno with ID: " + id);
+        }
+
         return obj.get();
     }
 
@@ -33,6 +39,11 @@ public class AlunoService {
 
     public Aluno update(Aluno obj) {
         Optional<Aluno> newObj = repository.findById(obj.getId());
+
+        if(newObj.isEmpty()){
+            throw new EntityNotFound("Not found Aluno with ID: " + obj.getId());
+        }
+
         updateAluno(newObj, obj);
         return repository.save(newObj.get());
     }
