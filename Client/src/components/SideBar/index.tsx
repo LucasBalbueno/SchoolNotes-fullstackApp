@@ -11,10 +11,10 @@ export function SideBar() {
             <Navigation>
                 <ul>
                     <li>
-                        <StyledLinkNav href="">Overboard</StyledLinkNav>
+                        <StyledLinkNav to="">Visão Geral</StyledLinkNav>
                     </li>
                     <li>
-                        <StyledLinkNav href="">Alunos</StyledLinkNav>
+                        <StyledLinkNav to="alunos">Alunos</StyledLinkNav>
                     </li>
                 </ul>
             </Navigation>

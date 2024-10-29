@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.aside`
     grid-area: sidebar;
@@ -34,7 +35,7 @@ export const Navigation = styled.nav`
     }
 `;
 
-export const StyledLinkNav = styled.a`
+export const StyledLinkNav = styled(Link)`
     font-family: ${({ theme }) => theme.FONTS.PRIMARY};
     font-weight: 400;
     font-size: 20px;
