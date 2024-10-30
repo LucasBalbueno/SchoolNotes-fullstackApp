@@ -44,4 +44,21 @@ export const GlobalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
+
+    &::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.COLORS.GREEN};
+        border-radius: 10px;
+        border: 3px solid ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.COLORS.GREEN} ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `;

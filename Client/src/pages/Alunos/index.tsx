@@ -54,13 +54,13 @@ export function Alunos () {
                         {alunos?.map((aluno) => (
                             <tr key={aluno.id}>
                                 <td>{aluno.name}</td>
-                                <td>{aluno.grade1.toFixed(2)}</td>
-                                <td>{aluno.grade2.toFixed(2)}</td>
-                                <td>{aluno.grade3.toFixed(2)}</td>
-                                <td>{aluno.grade4.toFixed(2)}</td>
-                                <td>{aluno.grade5.toFixed(2)}</td>
+                                <td>{aluno.grade1.toFixed(1)}</td>
+                                <td>{aluno.grade2.toFixed(1)}</td>
+                                <td>{aluno.grade3.toFixed(1)}</td>
+                                <td>{aluno.grade4.toFixed(1)}</td>
+                                <td>{aluno.grade5.toFixed(1)}</td>
                                 <td>{aluno.frequency}%</td>
-                                <td>{aluno.media.toFixed(2)}</td>
+                                <td>{aluno.media.toFixed(1)}</td>
                                 <td>
                                     <button onClick={ () => handleDeleteButton(aluno.id)}>
                                         <TiDelete/>

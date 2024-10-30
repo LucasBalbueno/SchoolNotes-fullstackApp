@@ -51,17 +51,25 @@ export const AverageGrade = styled.div`
             font-size: 30px;
         }
     }
-    `;
+`;
+
+export const ContainerLists = styled.div`
+    width: 75%;
+    overflow-x: auto;
+    height: 25%;
+    overflow-y: auto;
+    position: absolute;
+    top: 55%;
+`;
 
 export const ListAlunos = styled.div`
     display: flex;
-    flex-wrap: wrap;
     gap: 3rem;
-
+    
     div {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        text-align: center;
 
         h2 {
             font-family: ${({ theme }) => theme.FONTS.PRIMARY};
@@ -75,6 +83,7 @@ export const ListAlunos = styled.div`
         font-size: 16px;
         font-family: ${({ theme }) => theme.FONTS.PRIMARY};
         margin: 1rem;
+        width: 15rem;
             
         > thead {
             > tr {
