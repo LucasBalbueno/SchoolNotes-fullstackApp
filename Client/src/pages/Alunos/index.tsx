@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, TableContainer, TableAlunos } from './style'
 import { TiDelete } from "react-icons/ti";
 
-import { fetchAllAlunos } from '../../services/AlunosService';
+import { deleteAlunoById, fetchAllAlunos } from '../../services/AlunosService';
 import { AlunoType } from '../../types/AlunoType';
 
 export function Alunos () {
@@ -13,7 +13,11 @@ export function Alunos () {
         async function getAlunos() {
             try {
                 const data = await fetchAllAlunos();
-                setAlunos(data as AlunoType[]);
+                const alunosComMedia = (data as AlunoType[]).map(aluno => ({
+                    ...aluno,
+                    media: (aluno.grade1 + aluno.grade2 + aluno.grade3 + aluno.grade4 + aluno.grade5) / 5,
+                }));
+                setAlunos(alunosComMedia);
             } catch (error) {
                 console.error('Erro ao buscar alunos:', error);
             }
@@ -22,8 +26,10 @@ export function Alunos () {
         getAlunos();
     }, []);
 
-    console.log(alunos)
-
+    const handleDeleteButton = (id: number) => {
+        deleteAlunoById(id);
+        window.location.reload();
+    }
 
     return (
         <Container>
@@ -46,7 +52,7 @@ export function Alunos () {
                     </thead>
                     <tbody>
                         {alunos?.map((aluno) => (
-                            <tr>
+                            <tr key={aluno.id}>
                                 <td>{aluno.name}</td>
                                 <td>{aluno.grade1.toFixed(2)}</td>
                                 <td>{aluno.grade2.toFixed(2)}</td>
@@ -54,11 +60,11 @@ export function Alunos () {
                                 <td>{aluno.grade4.toFixed(2)}</td>
                                 <td>{aluno.grade5.toFixed(2)}</td>
                                 <td>{aluno.frequency}%</td>
-                                <td>0.00</td>
+                                <td>{aluno.media.toFixed(2)}</td>
                                 <td>
-                                    <div>
+                                    <button onClick={ () => handleDeleteButton(aluno.id)}>
                                         <TiDelete/>
-                                    </div>
+                                    </button>
                                 </td>
                             </tr>
                         ))}

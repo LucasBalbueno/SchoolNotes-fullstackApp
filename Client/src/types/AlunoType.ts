@@ -1,4 +1,5 @@
 export interface AlunoType {
+    id: number;
     name: string;
     grade1: number;
     grade2: number;
@@ -6,4 +7,5 @@ export interface AlunoType {
     grade4: number;
     grade5: number;
     frequency: number;
+    media: number;
 }

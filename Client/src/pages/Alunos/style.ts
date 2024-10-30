@@ -47,9 +47,17 @@ export const TableAlunos = styled.table`
                 vertical-align: middle;
                 border: 1px solid ${({ theme }) => theme.COLORS.GREEN};
 
-                div {
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     svg {
-                        cursor: pointer;
                         color: ${({ theme }) => theme.COLORS.RED};
                         font-size: 30px;
                     }
