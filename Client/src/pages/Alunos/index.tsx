@@ -1,7 +1,13 @@
 import { Container, TableContainer, TableAlunos } from './style'
 import { TiDelete } from "react-icons/ti";
 
+import { fetchAlunos } from '../../services/AlunosService';
+
 export function Alunos () {
+    const alunos = fetchAlunos();
+    console.log(alunos);
+
+
     return (
         <Container>
             <h1>Lista de alunos</h1>
