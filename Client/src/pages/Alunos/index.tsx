@@ -1,11 +1,28 @@
+import { useState, useEffect } from 'react';
+
 import { Container, TableContainer, TableAlunos } from './style'
 import { TiDelete } from "react-icons/ti";
 
-import { fetchAlunos } from '../../services/AlunosService';
+import { fetchAllAlunos } from '../../services/AlunosService';
+import { AlunoType } from '../../types/AlunoType';
 
 export function Alunos () {
-    const alunos = fetchAlunos();
-    console.log(alunos);
+    const [alunos, setAlunos] = useState<AlunoType[] | undefined>(undefined);
+
+    useEffect(() => {
+        async function getAlunos() {
+            try {
+                const data = await fetchAllAlunos();
+                setAlunos(data as AlunoType[]);
+            } catch (error) {
+                console.error('Erro ao buscar alunos:', error);
+            }
+        }
+
+        getAlunos();
+    }, []);
+
+    console.log(alunos)
 
 
     return (
