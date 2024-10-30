@@ -49,7 +49,7 @@ export function Overview () {
             sumfrequenciaGeral += aluno.frequency;
 
             if (alunos) {
-                const alunosBaixaFrequencia = alunos.filter(aluno => aluno.frequency < 70);
+                const alunosBaixaFrequencia = alunos.filter(aluno => aluno.frequency < 75);
                 setAlunosComFrequenciaBaixa(alunosBaixaFrequencia);
 
                 const alunosAcimaDaMediaMatematica = alunos.filter(aluno => aluno.grade1 > mediaMatematica);
