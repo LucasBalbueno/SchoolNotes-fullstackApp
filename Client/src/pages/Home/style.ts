@@ -11,9 +11,15 @@ export const Container = styled.div`
     grid-template-areas:
         'sidebar header'
         'sidebar content';
+
+    .sidebar-closed {
+        display: none;
+    }
 `;
 
-export const Content = styled.main`
+export const Content = styled.main<{ isOpen: boolean }>`
     grid-area: content;
-    /* background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800}; */
+    @media only screen and (max-width: 800px) {
+        ${({ isOpen }) => isOpen ? 'display: none' : ''}
+    }
 `;

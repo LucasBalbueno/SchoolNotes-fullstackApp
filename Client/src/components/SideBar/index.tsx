@@ -1,9 +1,15 @@
 import { Container, Title, Navigation, StyledLinkNav, CreateButton } from './style'
 import { FiPlus } from 'react-icons/fi';
 
-export function SideBar() {
+interface SideBarProps {
+    isOpen: boolean;
+}
+
+export function SideBar({ isOpen }: SideBarProps) {
+    console.log(isOpen)
+
     return (
-        <Container>
+        <Container className={`${isOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
             <Title>
                 <h1>SchoolNotes</h1>
             </Title>

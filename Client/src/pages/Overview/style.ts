@@ -15,6 +15,12 @@ export const Container = styled.div`
         text-transform: uppercase;
         font-weight: 700;
     }
+
+    @media only screen and (max-width: 800px) {
+        width: 95vw;
+        position: absolute;
+        left: -2rem;
+    }
 `;
 
 export const DashBoard = styled.div`
@@ -28,6 +34,7 @@ export const DashBoard = styled.div`
 export const AverageGrade = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     
     div {
         display: flex;
@@ -51,6 +58,22 @@ export const AverageGrade = styled.div`
             font-size: 30px;
         }
     }
+
+    @media only screen and (max-width: 900px) {
+        div {
+            padding: .5rem;
+            margin: .3rem;
+            
+            h2 {
+                font-size: 17px;
+                margin-bottom: .5rem;
+            }
+            
+            p {
+                font-size: 23px;
+            }
+        }
+    }
 `;
 
 export const ContainerLists = styled.div`
@@ -60,11 +83,36 @@ export const ContainerLists = styled.div`
     overflow-y: auto;
     position: absolute;
     top: 55%;
+
+    @media only screen and (max-width: 1450px) {
+        top: 70%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        width: 50%;
+        top: 65%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 70%;
+        top: 60%;
+        height: 40%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 70%;
+        top: 120%;
+        height: 40%;
+    }
 `;
 
 export const ListAlunos = styled.div`
     display: flex;
     gap: 3rem;
+
+    @media only screen and (max-width: 750px) {
+        flex-wrap: wrap;
+    }
     
     div {
         display: flex;
