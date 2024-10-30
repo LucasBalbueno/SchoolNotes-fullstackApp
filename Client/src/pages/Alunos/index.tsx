@@ -45,66 +45,23 @@ export function Alunos () {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>João Carlos</td>
-                            <td>1.00</td>
-                            <td>2.00</td>
-                            <td>3.00</td>
-                            <td>4.00</td>
-                            <td>5.00</td>
-                            <td>80%</td>
-                            <td>7.00</td>
-                            <td>
-                                <div>
-                                    <TiDelete/>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Maria Maça</td>
-                            <td>1.00</td>
-                            <td>2.00</td>
-                            <td>3.00</td>
-                            <td>4.00</td>
-                            <td>5.00</td>
-                            <td>80%</td>
-                            <td>7.00</td>
-                            <td>
-                                <div>
-                                    <TiDelete/>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Isa Melosa</td>
-                            <td>1.00</td>
-                            <td>2.00</td>
-                            <td>3.00</td>
-                            <td>4.00</td>
-                            <td>5.00</td>
-                            <td>80%</td>
-                            <td>7.00</td>
-                            <td>
-                                <div>
-                                    <TiDelete/>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Thiago Guloso</td>
-                            <td>1.00</td>
-                            <td>2.00</td>
-                            <td>3.00</td>
-                            <td>4.00</td>
-                            <td>5.00</td>
-                            <td>80%</td>
-                            <td>7.00</td>
-                            <td>
-                                <div>
-                                    <TiDelete/>
-                                </div>
-                            </td>
-                        </tr>
+                        {alunos?.map((aluno) => (
+                            <tr>
+                                <td>{aluno.name}</td>
+                                <td>{aluno.grade1.toFixed(2)}</td>
+                                <td>{aluno.grade2.toFixed(2)}</td>
+                                <td>{aluno.grade3.toFixed(2)}</td>
+                                <td>{aluno.grade4.toFixed(2)}</td>
+                                <td>{aluno.grade5.toFixed(2)}</td>
+                                <td>{aluno.frequency}%</td>
+                                <td>0.00</td>
+                                <td>
+                                    <div>
+                                        <TiDelete/>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </TableAlunos>
             </TableContainer>
