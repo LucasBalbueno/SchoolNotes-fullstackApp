@@ -59,7 +59,7 @@ export function Alunos () {
                                 <td>{aluno.grade3.toFixed(1)}</td>
                                 <td>{aluno.grade4.toFixed(1)}</td>
                                 <td>{aluno.grade5.toFixed(1)}</td>
-                                <td>{aluno.frequency}%</td>
+                                <td>{aluno.frequency.toFixed(1)}%</td>
                                 <td>{aluno.media.toFixed(1)}</td>
                                 <td>
                                     <button onClick={ () => handleDeleteButton(aluno.id)}>

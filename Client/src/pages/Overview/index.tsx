@@ -77,8 +77,6 @@ export function Overview () {
         setMediaFrequenciaGeral(sumfrequenciaGeral / (alunos?.length || 1));
     }, [alunos]);
 
-    console.log(alunosComFrequenciaBaixa);
-
     return (
         <Container>
             <h1>Visão Geral</h1>
@@ -107,7 +105,7 @@ export function Overview () {
                     </div>
                     <div>
                         <h2>Frequência Geral</h2>
-                        <p>{mediaFrequenciaGeral}%</p>
+                        <p>{mediaFrequenciaGeral.toFixed(1)}%</p>
                     </div>
                 </AverageGrade>
 
@@ -125,9 +123,9 @@ export function Overview () {
                                 </thead>
                                 <tbody>
                                 {alunosComFrequenciaBaixa?.map((aluno) => (
-                                    <tr>
+                                    <tr key={aluno.id}>
                                         <td>{aluno.name}</td>
-                                        <td>{aluno.frequency}%</td>
+                                        <td>{aluno.frequency.toFixed(1)}%</td>
                                     </tr>
                                 ))}
                                 </tbody>
@@ -146,7 +144,7 @@ export function Overview () {
                                 </thead>
                                 <tbody>
                                     {alunosAcimaDaMediaMatematica?.map((aluno) => (
-                                        <tr>
+                                        <tr key={aluno.id}>
                                             <td>{aluno.name}</td>
                                             <td>{aluno.grade1}</td>
                                         </tr>
@@ -167,7 +165,7 @@ export function Overview () {
                                 </thead>
                                 <tbody>
                                     {alunosAcimaDaMediaFisica?.map((aluno) => (
-                                        <tr>
+                                        <tr key={aluno.id}>
                                             <td>{aluno.name}</td>
                                             <td>{aluno.grade2}</td>
                                         </tr>
@@ -188,7 +186,7 @@ export function Overview () {
                                 </thead>
                                 <tbody>
                                     {alunosAcimaDaMediaQuimica?.map((aluno) => (
-                                        <tr>
+                                        <tr key={aluno.id}>
                                             <td>{aluno.name}</td>
                                             <td>{aluno.grade3}</td>
                                         </tr>
@@ -209,7 +207,7 @@ export function Overview () {
                                 </thead>
                                 <tbody>
                                     {alunosAcimaDaMediaBiologia?.map((aluno) => (
-                                        <tr>
+                                        <tr key={aluno.id}>
                                             <td>{aluno.name}</td>
                                             <td>{aluno.grade4}</td>
                                         </tr>
@@ -229,7 +227,7 @@ export function Overview () {
                                 </thead>
                                 <tbody>
                                     {alunosAcimaDaMediaEstatistica?.map((aluno) => (
-                                        <tr>
+                                        <tr key={aluno.id}>
                                             <td>{aluno.name}</td>
                                             <td>{aluno.grade5}</td>
                                         </tr>

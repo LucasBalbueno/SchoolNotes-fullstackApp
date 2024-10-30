@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AlunoType } from '../types/AlunoType';
+import { newAlunoType } from '../types/AlunoType';
 
 const URL_API = "http://localhost:8080/alunos";
 
@@ -13,17 +13,17 @@ export async function fetchAllAlunos() {
     }
 }
 
-export async function fetchAlunoById(id: number) {
-    try {
-        const response = await axios.get(`${URL_API}/${id}`);
-        return response.data;
-    } catch (error) {
-        console.error('Erro ao buscar aluno:', error);
-        throw error;
-    }
-}
+// export async function fetchAlunoById(id: number) {
+//     try {
+//         const response = await axios.get(`${URL_API}/${id}`);
+//         return response.data;
+//     } catch (error) {
+//         console.error('Erro ao buscar aluno:', error);
+//         throw error;
+//     }
+// }
 
-export async function createAluno(aluno: AlunoType) {
+export async function createAluno(aluno: newAlunoType) {
     try {
         const response = await axios.post(URL_API, aluno);
         return response.data;
