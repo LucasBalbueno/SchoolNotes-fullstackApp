@@ -19,7 +19,7 @@ export function SideBar() {
                 </ul>
             </Navigation>
 
-            <CreateButton>
+            <CreateButton to="/new">
                 <FiPlus />
                 <h2>Adicionar Aluno</h2>
             </CreateButton>

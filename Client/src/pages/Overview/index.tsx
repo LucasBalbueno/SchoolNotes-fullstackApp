@@ -24,7 +24,7 @@ export function Overview () {
                         <p>7.0</p>
                     </div>
                     <div>
-                        <h2>Média Lógica</h2>
+                        <h2>Média Estatística</h2>
                         <p>7.0</p>
                     </div>
                     <div>

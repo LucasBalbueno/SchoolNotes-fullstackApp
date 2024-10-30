@@ -17,6 +17,11 @@ export const Container = styled.div`
     }
 `;
 
+export const TableContainer = styled.div`
+    max-height: calc(60vh);
+    overflow-y: auto;
+`;
+
 export const TableAlunos = styled.table`
     color: ${({ theme }) => theme.COLORS.CREAM};
     font-size: 16px;

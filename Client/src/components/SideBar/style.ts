@@ -49,13 +49,14 @@ export const StyledLinkNav = styled(Link)`
     }
 `;
 
-export const CreateButton = styled.div`
+export const CreateButton = styled(Link)`
     height: 100px;
     width: 100%;
     background-color: ${({ theme }) => theme.COLORS.GREEN};
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 
     h2 {
         font-family: ${({ theme }) => theme.FONTS.PRIMARY};
